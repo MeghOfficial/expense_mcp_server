@@ -186,8 +186,12 @@ def categories():
 # Run the MCP server
 # -------------------------------
 def main():
-    port=os.getenv("PORT", "8000")
-    mcp.run(transport="http", host="0.0.0.0", port=port)
+    port = int(os.getenv("PORT", 8000))
+    mcp.run(
+        transport="sse",
+        host="0.0.0.0",
+        port=port
+    )
     
 if __name__ == "__main__":
     main()
