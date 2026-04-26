@@ -187,6 +187,6 @@ def categories():
 # -------------------------------
 def main():
     mcp.run(transport="http", host="0.0.0.0", port=8000)
-
-if name == "main":
+    
+if __name__ == "__main__":
     main()
